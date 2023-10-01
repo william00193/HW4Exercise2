@@ -29,32 +29,32 @@ class MainActivity : AppCompatActivity() {
      * Increase the score for Team A by 1 point.
      */
     fun addOneForTeamA(v: View?) {
-//        scoreTeamA++
 
         ViewModel.addOneA()
 
         displayForTeamA(ViewModel.scoreTeamA)
     }
 
+
     /**
      * Increase the score for Team A by 2 points.
      */
     fun addTwoForTeamA(v: View?) {
-//        scoreTeamA += 2
-        ViewModel.addTwoA()
 
+        ViewModel.addTwoA()
 
         displayForTeamA(ViewModel.scoreTeamA)
 
-
     }
+
+
 
     /**
      * Increase the score for Team A by 3 points.
      */
     fun addThreeForTeamA(v: View?) {
-        ViewModel.addThreeA()
 
+        ViewModel.addThreeA()
 
         displayForTeamA(ViewModel.scoreTeamA)
 
@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
      * Increase the score for Team B by 1 point.
      */
     fun addOneForTeamB(v: View?) {
-//        scoreTeamB++
+
         ViewModel.addOneB()
 
         displayForTeamB(ViewModel.scoreTeamB)
@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
      * Increase the score for Team B by 2 points.
      */
     fun addTwoForTeamB(v: View?) {
-//        scoreTeamB += 2
+
         ViewModel.addTwoB()
 
 
@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
      * Increase the score for Team B by 3 points.
      */
     fun addThreeForTeamB(v: View?) {
-//        scoreTeamB += 3
+
         ViewModel.addThreeB()
 
         displayForTeamB(ViewModel.scoreTeamB)
@@ -97,10 +97,9 @@ class MainActivity : AppCompatActivity() {
      * Resets the score for both teams back to 0.
      */
     fun resetScore(v: View?) {
-//        scoreTeamA = 0
-//        scoreTeamB = 0
+
         ViewModel.Reset()
-//        displayForTeamA(scoreTeamA)
+
         displayForTeamA(ViewModel.scoreTeamA)
         displayForTeamB(ViewModel.scoreTeamB)
     }
@@ -115,7 +114,6 @@ class MainActivity : AppCompatActivity() {
     fun displayForTeamA(score: Int) {
         val scoreView = binding.teamAScore
         scoreView.text = score.toString()
-        scoreTeamA
     }
 
 

@@ -5,47 +5,25 @@ import androidx.lifecycle.ViewModel
 import com.example.courtcounter.databinding.ActivityMainBinding
 
 
-private lateinit var binding: ActivityMainBinding
-
-private const val TAG = "ViewModel"
 const val CURRENT_INDEX_KEY = "CURRENT_INDEX_KEY"
+const val CURRENT_INDEX_KEY2 = "CURRENT_INDEX_KEY2"
 
-
-
-
- val scoreTeamA = 0
-
-val scoreTeamB = 0
 
 
 
 class ViewModel(private val savedStateHandle: SavedStateHandle): ViewModel() {
 
-    fun displayA() {
-        scoreTeamA
-    }
 
 
-    fun displayB() {
-        scoreTeamB
-    }
+    var scoreTeamA: Int
 
+        get() = savedStateHandle.get(CURRENT_INDEX_KEY) ?: 0
+        set(value) = savedStateHandle.set(CURRENT_INDEX_KEY, value)
 
-    var scoreTeamA = 0
+    var scoreTeamB: Int
 
-    var scoreTeamB = 0
-
-
-//    val scoreTeamA: Int
-//        get() = scoreTeamA
-//
-//    val scoreTeamB: Int
-//        get() = scoreTeamB
-
-
-//        get() = savedStateHandle.get(CURRENT_INDEX_KEY)?:0
-//        set(value) = savedStateHandle.set(CURRENT_INDEX_KEY, value)
-
+        get() = savedStateHandle.get(CURRENT_INDEX_KEY2) ?: 0
+        set(value) = savedStateHandle.set(CURRENT_INDEX_KEY2, value)
 
 
 
@@ -83,10 +61,6 @@ class ViewModel(private val savedStateHandle: SavedStateHandle): ViewModel() {
         scoreTeamA = 0
         scoreTeamB = 0
     }
-
-
-
-
 
 
 
